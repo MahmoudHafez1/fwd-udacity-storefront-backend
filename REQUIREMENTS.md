@@ -48,7 +48,7 @@ These are the notes from a meeting with the frontend developer that describe wha
 
 ## Database Tables
 
-- product (id: serial primary key, name: varchar, price: decimal, category: varchar)
-- user (id: serial primary key, first_name: varchar, last_name: varchar, password: varchar)
+- product (id: serial primary key, product_name: varchar, price: decimal, category: varchar)
+- user (id: serial primary key, first_name: varchar, last_name: varchar, user_pass: varchar)
 - order (id: serial primary key, user_id: int[foreign key to user table], status: varchar)
 - order_products (order_id: foreign key to order table, product_id: foreign key to product table, quantity: int)
