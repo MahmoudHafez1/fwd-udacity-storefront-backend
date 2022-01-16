@@ -1,1 +1,5 @@
-CREATE TABLE product (id: SERIAL PRIMARY KEY, first_name: VARCHAR, last_name: VARCHAR, user_pass: VARCHAR)
+CREATE TABLE "user" (
+    id SERIAL PRIMARY KEY,
+    first_name VARCHAR,
+    last_name VARCHAR,
+    pass VARCHAR)

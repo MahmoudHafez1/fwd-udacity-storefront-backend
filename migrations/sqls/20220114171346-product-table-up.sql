@@ -1,1 +1,5 @@
-CREATE TABLE product (id SERIAL PRIMARY KEY, product_name VARCHAR, price DECIMAL, category: VARCHAR );
+CREATE TABLE product (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR,
+    price NUMERIC,
+    category VARCHAR );
