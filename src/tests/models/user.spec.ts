@@ -9,9 +9,12 @@ const user: User = {
 };
 
 describe("test user methods", () => {
-  it("should create new user", async () => {
+  beforeAll(async () => {
     const res = await store.create(user);
     user.id = res.id;
+  });
+  it("should create new user", async () => {
+    const res = await store.create(user);
     expect(res).toBeTruthy();
   });
 

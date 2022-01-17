@@ -9,9 +9,13 @@ const product: Product = {
 };
 
 describe("test product methods", () => {
-  it("should create new product", async () => {
+  beforeAll(async () => {
     const res = await store.create(product);
     product.id = res.id;
+  });
+
+  it("should create new product", async () => {
+    const res = await store.create(product);
     expect(res).toBeTruthy();
   });
 

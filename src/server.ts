@@ -8,7 +8,7 @@ import orderRoutes from "./handlers/orderRoutes";
 
 dotenv.config();
 
-const app: express.Application = express();
+export const app: express.Application = express();
 const port = process.env.PORT;
 
 app.use(bodyParser.json());
