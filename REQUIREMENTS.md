@@ -44,9 +44,9 @@ These are the notes from a meeting with the frontend developer that describe wha
 #### User
 
 - id
-- firstName
-- lastName
-- password
+- first_name
+- last_name
+- pass
 
 #### Orders
 
