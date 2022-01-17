@@ -4,6 +4,7 @@ import bodyParser from "body-parser";
 
 import productRoutes from "./handlers/productRoutes";
 import userRoutes from "./handlers/userRoutes";
+import orderRoutes from "./handlers/orderRoutes";
 
 dotenv.config();
 
@@ -18,6 +19,7 @@ app.get("/", function (req: Request, res: Response) {
 
 productRoutes(app);
 userRoutes(app);
+orderRoutes(app);
 
 app.listen(port, function () {
   console.log(`starting app on: ${port}`);

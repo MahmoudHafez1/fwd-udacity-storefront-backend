@@ -8,19 +8,29 @@ These are the notes from a meeting with the frontend developer that describe wha
 
 #### Products
 
-- Index [Get]
-- Show '/:id' [Get]
-- Create '/' (body: User) [token required] [Post]
+- Index
+  '/product' [Get]
+- Show
+  '/product/:id' [Get]
+- Create
+  '/product' [token required] [Post]
+  (body: {name: string, price:number, category:string})
 
 #### Users
 
-- Index '/' [token required] [Get]
-- Show '/:id' [token required] [Get]
-- Create '/' [token required] [Post]
+- Index
+  '/user' [token required] [Get]
+- Show
+  '/user/:id' [token required] [Get]
+- Create '/user' [Post]
+  (body:{first_name: stirng, last_name: string, pass: string})
 
 #### Orders
 
-- Current Order by user '/:user_id' [token required] [Get]
+- Create Order
+  '/order' [token required] [post]
+- Current Order by user
+  '/order/:user_id' [token required] [Get]
 
 ## Data Shapes
 

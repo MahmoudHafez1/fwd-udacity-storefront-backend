@@ -36,7 +36,6 @@ export class UserStore {
 
   async create(user: User): Promise<User> {
     try {
-      console.log(user);
       const pepper = process.env.BCRYPT_PASSWORD;
       const saltRounds = parseInt(process.env.SALT_ROUNDS as string);
       const hash = bcrypt.hashSync(user.pass + pepper, saltRounds);
@@ -48,7 +47,6 @@ export class UserStore {
         user["last_name"],
         hash,
       ]);
-      console.log(result);
       conn.release();
       return result.rows[0];
     } catch {

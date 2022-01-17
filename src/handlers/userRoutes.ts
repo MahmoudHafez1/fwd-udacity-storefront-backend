@@ -29,7 +29,7 @@ const create = async (req: Request, res: Response) => {
 const userRoutes = (app: express.Application) => {
   app.get("/user", auth, index);
   app.get("/user/:id", auth, show);
-  app.post("/user", auth, create);
+  app.post("/user", create);
 };
 
 export default userRoutes;
