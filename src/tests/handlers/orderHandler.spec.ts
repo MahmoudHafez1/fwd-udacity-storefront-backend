@@ -17,8 +17,6 @@ describe("test order endpoints", () => {
       pass: "1234",
     });
     userToken = userRes.body;
-    const decoded = jwt.verify(userToken, process.env.TOKEN_SECRET as string);
-    userId = decoded.id;
     const prodRes = await request
       .post("/product")
       .set("authorization", "Bearer " + userToken)
@@ -34,7 +32,7 @@ describe("test order endpoints", () => {
       .post("/order")
       .set("authorization", "Bearer " + userToken)
       .send({
-        user_id: userId,
+        user_id: 1,
         order_status: "status",
         products: [{ product_id: 1, quantity: 2 }],
       });

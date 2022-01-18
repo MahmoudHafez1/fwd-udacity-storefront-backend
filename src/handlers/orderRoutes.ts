@@ -13,9 +13,10 @@ const create = async (req: Request, res: Response) => {
       products: req.body.products,
     };
     const result = await store.create(order);
-    res.json(" order created successfully");
+    res.json("order created successfully");
   } catch {
-    throw new Error("something went wrong");
+    res.status(400);
+    res.json("something went wrong");
   }
 };
 
@@ -25,7 +26,8 @@ const current = async (req: Request, res: Response) => {
     const result = await store.current(user_id);
     res.json(result);
   } catch {
-    throw new Error("something went wrong");
+    res.status(400);
+    res.json("something went wrong");
   }
 };
 
